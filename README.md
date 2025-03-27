@@ -16,6 +16,6 @@ The ACAP-AG model includes two steps:
 
 3. Prediction of active compounds for anticancer therapy.
 
-   The representations of compounds and cells/patients were used to construct kernel-based similarity matrices, and the fully connected deep neural network was introdcued to conduct the calssification task, that is, distinguish active compounds from those compounds with no anticancer activity.
+   The representations of compounds and cells/patients were used to construct kernel-based similarity matrices. the fully connected deep neural network was introdcued to conduct the calssification task, that is, distinguish active compounds from those compounds with no anticancer activity. The detail of this procedure can be found in our previous repository (DeepDRK).
 
    The steps was implemented via h2o R package, with hyperbolic tangent function (Tanh) as activation function, cross-entropy function was chosen as the loss function, two hidden layers and each layer limited to a maximum of 200 nodes.
