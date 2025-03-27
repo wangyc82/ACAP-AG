@@ -10,7 +10,7 @@ The ACAP-AG model includes two steps:
 
    The embedding representation was achieved by a modified attentive graph neural network with integration of chemical structure, physicochemical properties, and target proteins of given compound.
 
-   This substep was performed via pytorch framework refered by getnoteAttrfromGAT.py. You have to prepare the MACCS keys for compounds as the note attributes for graph (GDSCandCTRP-drug-MACCkeys.csv, for instance), adjacent matrix for compound-compound interaction newtwork which was established by physicochemical properties (GDSCandCTRP-DDI-phyproperties.csv, for example), and target proteins of given compounds. If you would like to do the pretraining, you have to provide the note tags as the output of AGNN (GDSCandCTRP_compound_cid_phyproperties_vec.csv, for example).  
+   This substep was performed via pytorch framework refered by getnoteAttrfromGAT.py. You have to prepare the MACCS keys for compounds as the note attributes for graph (GDSCandCTRP-drug-MACCkeys.csv, for instance), adjacent matrix for compound-compound interaction newtwork which was established by physicochemical properties (GDSCandCTRP-DDI-adj, for example), and target proteins of given compounds. If you would like to do the pretraining, you have to provide the note properties as the output of AGNN (GDSCandCTRP-drug_polorea.csv, for example).  
 
    The cancer cells or patients were represented by their transcriptomic profiles.
 
