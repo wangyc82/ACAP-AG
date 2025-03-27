@@ -23,12 +23,12 @@ note_attr=torch.tensor(df1.values,dtype=torch.float)
 #comps_maccs166_1=comps_maccs166.iloc[lab,:]
 #note_attr=torch.tensor(comps_maccs166_1.values,dtype=torch.float)
 
-df = pd.read_csv('GDSCandCTRP-DDI-phyproperties.csv',delimiter=",")
+df = pd.read_csv('GDSCandCTRP-DDI-adj.csv',delimiter=",")
 df1=df.loc[:,df.columns != 'Unnamed: 0']
 adj_t=torch.tensor(df1.values)
 edge_index = adj_t.nonzero().t().contiguous()
 
-df = pd.read_csv('GDSCandCTRP_compound_cid_phyproperties_vec.csv',delimiter=",")
+df = pd.read_csv('GDSCandCTRP-drug_polorea.csv',delimiter=",")
 y =torch.zeros(note_attr.shape[0],dtype=torch.long)
 y[df['x']==1]=1
 #df.loc[(df['x'] >= 73) & (df['x'] < 92), 'y'] = 1
