@@ -8,6 +8,13 @@
 # responseNP_mat2 is anticancer activities (IC50) for natural products obtained from NPASS data
 # sim.cell is kernel-based similarity matrix for cancer cell lines in GDSCandCTRP combination data
 
+# load training data
+load("~/Documents/ACAP-AG/train-example.RData")
+# import the kernel-based cell similarity matrix
+sim_cell <- read_csv("Documents/ACAP-AG/sim.cell.csv")
+sim.cell<-data.matrix(sim_cell[,-1])
+rownames(sim.cell)<-sim_cell$...1
+
 library(readr)
 GDSCandCTRP_NPASS_drugsGATrepresentation_cophyDDI <- read_csv("Documents/ACAP-AG/GDSCandCTRP-NPASS-drugsGATrepresentation-cophyDDI.csv")
 
